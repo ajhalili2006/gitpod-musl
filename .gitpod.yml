@@ -1,2 +1,6 @@
 image:
   file: .gitpod.Dockerfile
+tasks:
+  - name: Clone magalinter
+    before: git -C "./megalinter" pull || true
+    init: git clone https://github.com/megalinter/megalinter ./megalinter
